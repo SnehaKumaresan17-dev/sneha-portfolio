@@ -205,6 +205,32 @@
   .project-link{font-size:0.86rem; letter-spacing:0.03em; border-bottom:1px solid var(--ink); padding-bottom:3px; display:inline-flex; align-items:center; gap:8px; transition:gap 0.25s, color 0.25s, border-color .25s;}
   .project-link:hover{gap:14px; color:var(--gold); border-color:var(--gold);}
 
+
+
+/* CASE STUDY TOGGLE */
+.case-toggle{
+  background:none; border:none; cursor:pointer; padding:0 0 3px 0;
+  font-size:0.86rem; letter-spacing:0.03em; color:var(--ink); font-family:'Inter',sans-serif;
+  border-bottom:1px solid var(--ink);
+  display:inline-flex; align-items:center; gap:8px;
+  transition:color 0.25s, border-color 0.25s;
+}
+.case-toggle:hover{color:var(--gold); border-color:var(--gold);}
+.case-toggle-icon{font-family:'Fraunces', serif; font-size:1.05rem; line-height:1; transition:transform 0.35s ease;}
+.case-toggle[aria-expanded="true"] .case-toggle-icon{transform:rotate(45deg);}
+.case-study{
+  max-height:0; overflow:hidden; opacity:0;
+  transition:max-height 0.6s cubic-bezier(.2,.7,.2,1), opacity 0.45s ease, margin-top 0.45s ease;
+}
+.case-study.open{max-height:1200px; opacity:1; margin-top:26px;}
+.case-block{margin-bottom:18px; max-width:460px;}
+.case-block:last-child{margin-bottom:0;}
+.case-block h4{font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--gold); margin-bottom:6px; font-family:'Inter',sans-serif; font-weight:600;}
+.case-block p{color:var(--slate); font-size:0.92rem; margin-bottom:0; max-width:460px;}
+
+
+
+
   /* SKILLS */
   .skills-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
   .skill-card{background:var(--ivory); padding:36px 30px;}
@@ -339,7 +365,7 @@
     <div class="work-grid">
 
       <div class="project reveal">
-        <div class="project-media tilt"><img src="images/roam_lago_hero.png" alt="Roam Lago travel booking website hero screen"></div>
+        <div class="project-media tilt"><img src="images/lake.png" alt="Roam Lago travel booking website hero screen"></div>
         <div class="project-body">
           <span class="project-index">Travel · Booking UX</span>
           <h3>Roam Lago</h3>
@@ -348,8 +374,18 @@
         </div>
       </div>
 
+
+<button class="case-toggle" aria-expanded="false"><span class="case-toggle-label">Read Case Study</span><span class="case-toggle-icon">+</span></button>
+<div class="case-study">
+  <div class="case-block"><h4>Problem</h4><p>A self-directed brief: design a niche travel booking site for Lake Como as an alternative to generic template-heavy tour sites that overload visitors with too many CTAs and unclear next steps.</p></div>
+  <div class="case-block"><h4>Process</h4><p>Studied a few existing travel and tour booking sites to spot friction points, sketched the user flow from landing through browsing experiences to booking, then wireframed the booking widget and package cards before layering in visual design.</p></div>
+  <div class="case-block"><h4>Key Decisions</h4><p>A single scannable hero with one clear primary action, a persistent booking widget kept above the fold instead of a separate page, and editorial serif type paired with real destination photography to build trust rather than generic stock icons.</p></div>
+  <div class="case-block"><h4>Reflection</h4><p>The hardest part was keeping the booking form compact without hiding key fields — balancing visual richness with functional clarity for an actual transactional flow.</p></div>
+</div>
+
+
       <div class="project reveal">
-        <div class="project-media tilt"><img src="images/mafia_hero.png" alt="MAFIA perfume brand website hero screen"></div>
+        <div class="project-media tilt"><img src="images/mas1.png" alt="MAFIA perfume brand website hero screen"></div>
         <div class="project-body">
           <span class="project-index">Luxury · Brand Identity</span>
           <h3>MAFIA Perfumes</h3>
@@ -357,9 +393,16 @@
           <div class="project-tags"><span>Visual Identity</span><span>E-commerce</span><span>Dark UI</span></div>
         </div>
       </div>
+<button class="case-toggle" aria-expanded="false"><span class="case-toggle-label">Read Case Study</span><span class="case-toggle-icon">+</span></button>
+<div class="case-study">
+  <div class="case-block"><h4>Problem</h4><p>A personal challenge after noticing how many perfume e-commerce sites lean on heavy ornamentation: explore how far restraint and negative space alone can carry a luxury brand.</p></div>
+  <div class="case-block"><h4>Process</h4><p>Moodboarded macro perfume photography and dark cinematic references, drawing on the atmosphere of psychological fiction I also explore in my own writing — tension built through restraint rather than exposition. That same instinct shaped how much the layout revealed at once, testing how much copy it could hold before it lost its quiet tone.</p></div>  <div class="case-block"><h4>Key Decisions</h4><p>One accent color only against near-black, an oversized serif wordmark as the anchor, and generous space between sections to deliberately slow the scroll down.</p></div>
+  <div class="case-block"><h4>Reflection</h4><p>Restraint took more discipline than adding more would have — the hardest part was trusting empty space instead of filling it.</p></div>
+</div>
+
 
       <div class="project reveal">
-        <div class="project-media tilt"><img src="images/stellarnova_events.png" alt="StellarNova astronomy events website"></div>
+        <div class="project-media tilt"><img src="images/ste.png" alt="StellarNova astronomy events website"></div>
         <div class="project-body">
           <span class="project-index">Content · Community</span>
           <h3>StellarNova</h3>
@@ -368,8 +411,19 @@
         </div>
       </div>
 
+<button class="case-toggle" aria-expanded="false"><span class="case-toggle-label">Read Case Study</span><span class="case-toggle-icon">+</span></button>
+<div class="case-study">
+  <div class="case-block"><h4>Problem</h4><p>Design a content-heavy niche community site — events, articles, and product recommendations all in one place — without it feeling cluttered, since astronomy enthusiast sites often stack information densely.</p></div>
+  <div class="case-block"><h4>Process</h4><p>Card-sorted the three content types first, then designed a dark, starfield-inspired system so the imagery itself — nebulae, meteor showers — could carry visual interest instead of heavy UI chrome.</p></div>
+  <div class="case-block"><h4>Key Decisions</h4><p>One consistent card component reused across events, blogs, and affiliates for familiarity; a muted dark background so astrophotography pops; a clear "read more" pattern for scanning a long homepage.</p></div>
+  <div class="case-block"><h4>Reflection</h4><p>The real challenge was information architecture more than visuals — deciding what belonged on the homepage versus what could live deeper in the site.</p></div>
+</div>
+
+
+
+
       <div class="project reveal">
-        <div class="project-media tilt"><img src="images/asj_atelier_products.png" alt="ASJ Atelier fashion shopping mobile app"></div>
+        <div class="project-media tilt"><img src="images/aaa.png" alt="ASJ Atelier fashion shopping mobile app"></div>
         <div class="project-body">
           <span class="project-index">Fashion · Mobile App</span>
           <h3>ASJ Atelier</h3>
@@ -378,8 +432,18 @@
         </div>
       </div>
 
+<button class="case-toggle" aria-expanded="false"><span class="case-toggle-label">Read Case Study</span><span class="case-toggle-icon">+</span></button>
+<div class="case-study">
+  <div class="case-block"><h4>Problem</h4><p>Practice mobile commerce patterns for a winter-coat collection, focused on making catalogue browsing and filtering feel fast on a small screen.</p></div>
+  <div class="case-block"><h4>Process</h4><p>Sketched the filter and tab structure first — Women/Men/New/Sale, then sub-filters — before building the product card component so it could work at both grid and detail-view sizes.</p></div>
+  <div class="case-block"><h4>Key Decisions</h4><p>A persistent horizontal filter bar instead of a buried dropdown, a consistent color-swatch and size-pill pattern reused on every product so the interaction is learned once, and a minimal bottom nav for one-thumb use.</p></div>
+  <div class="case-block"><h4>Reflection</h4><p>Mobile constraints forced tighter prioritization — learned to cut secondary information from the card view and push it to the detail screen instead.</p></div>
+</div>
+
+
+
       <div class="project reveal">
-        <div class="project-media tilt"><img src="images/patisserie_landing.png" alt="The Patisserie Co dessert bakery website"></div>
+        <div class="project-media tilt"><img src="images/pas.png" alt="The Patisserie Co dessert bakery website"></div>
         <div class="project-body">
           <span class="project-index">Food · Brand Site</span>
           <h3>The Patisserie Co</h3>
@@ -388,8 +452,20 @@
         </div>
       </div>
 
+
+<button class="case-toggle" aria-expanded="false"><span class="case-toggle-label">Read Case Study</span><span class="case-toggle-icon">+</span></button>
+<div class="case-study">
+  <div class="case-block"><h4>Problem</h4><p>Many bakery websites lack a warm and appetizing visual experience.
+Users often struggle to quickly explore products, understand offerings, and feel confident placing an order online.</p></div>
+  <div class="case-block"><h4>Process</h4><p>Started from the food photography, choosing a warm rose palette that complemented it, then built type-driven sections so each dish got its own spotlight rather than competing in a crowded grid.</p></div>
+  <div class="case-block"><h4>Key Decisions</h4><p>One dessert per hero section instead of a dense product grid up top, a soft dotted-circle frame around plated shots for a "presented on a stand" feel, and a consistent warm gradient to keep the palette cohesive across sections.</p></div>
+  <div class="case-block"><h4>Reflection</h4><p>Learned how much typography scale affects appetite appeal — smaller, cramped type made the same photography feel far less premium in early drafts.</p></div>
+</div>
+
+
+
       <div class="project reveal">
-        <div class="project-media tilt"><img src="images/swirla_banner.png" alt="Swirla dessert landing page banner"></div>
+        <div class="project-media tilt"><img src="images/man1.png" alt="Swirla dessert landing page banner"></div>
         <div class="project-body">
           <span class="project-index">Food · Landing Page</span>
           <h3>Swirla</h3>
@@ -397,6 +473,15 @@
           <div class="project-tags"><span>Landing Page</span><span>Product Focus</span></div>
         </div>
       </div>
+
+
+      <button class="case-toggle" aria-expanded="false"><span class="case-toggle-label">Read Case Study</span><span class="case-toggle-icon">+</span></button>
+<div class="case-study">
+  <div class="case-block"><h4>Problem</h4><p>Practice a single-product landing page — the opposite challenge of a full site, where one page alone has to do all the persuading with no other pages to fall back on.</p></div>
+  <div class="case-block"><h4>Process</h4><p>Built the page around the product shot first, then layered proof points — rating, reviewer avatars — and a single clear call-to-action around it without introducing competing sections.</p></div>
+  <div class="case-block"><h4>Key Decisions</h4><p>One flavour, one color story (mango yellow) instead of a neutral template palette, playful sparkle accents to match the product's fun tone, and the CTA positioned early since there's no navigation to explore further.</p></div>
+  <div class="case-block"><h4>Reflection</h4><p>Realized landing pages live or die on hierarchy — every element had to justify why it was there, since there was no secondary page to send undecided visitors to.</p></div>
+</div>
 
     </div>
   </div>
@@ -573,8 +658,22 @@
       });
     });
   }
+
+/* Case study toggles */
+document.querySelectorAll('.case-toggle').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var panel = btn.nextElementSibling;
+    var isOpen = panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    var label = btn.querySelector('.case-toggle-label');
+    if(label){ label.textContent = isOpen ? 'Hide Case Study' : 'Read Case Study'; }
+  });
+});
+
+
 })();
 </script>
 
 </body>
 </html>
+ 
